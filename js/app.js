@@ -26,9 +26,11 @@ AppState.prototype.saveToLocalStorage = function () {
 AppState.prototype.loadItems = function () {
 
   // TODO: Update this instance method to retrieve data from local storage instead of creating new Products on each page load
-
-  this.instantiateProducts();
-
+  if (localStorage.getItem('allProducts')) {
+    state.allProducts = JSON.parse(localStorage.getItem('allProducts'));
+  } else {
+    this.instantiateProducts();
+  }
 }
 
 
