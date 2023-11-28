@@ -11,6 +11,8 @@ state.loadItems();
  *
  */
 function renderChart() {
+  const ctx = document.getElementById('chart').getContext('2d');
+
   const resultsData = {
     labels: state.allProducts.map(obj => obj.name),
     datasets: [{
@@ -27,7 +29,8 @@ function renderChart() {
       borderWidth: 4
     }]
   }
-  const options = {
+
+  const resultOptions = {
     options: {
       responsive: true,
       scales: {
@@ -37,6 +40,11 @@ function renderChart() {
       }
     }
   }
+  new Chart(ctx, {
+    type: 'bar',
+    resultsData,
+    resultOptions
+  });
 }
 
 renderChart();
