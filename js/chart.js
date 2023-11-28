@@ -40,7 +40,7 @@ function renderChart() {
       }
     }
   }
-  new Chart(ctx, {
+  new Chart(canvasElem, {
     type: 'bar',
     resultsData,
     resultOptions
