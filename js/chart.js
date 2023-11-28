@@ -11,39 +11,36 @@ state.loadItems();
  *
  */
 function renderChart() {
-  const ctx = document.getElementById('chart').getContext('2d');
 
-  const resultsData = {
+  const ctx = canvasElem.getContext('2d');
+
+  // Chart.js configuration
+  const chartData = {
     labels: state.allProducts.map(obj => obj.name),
     datasets: [{
       label: 'Votes',
-      data: state.allProducts.map(obj => obj.timesClicked),
-      backgroundColor: 'rgba(255, 99, 132)',
-      borderColor: 'transparent',
-      borderWidth: 4
-    }, {
+      data: state.allProducts.map(obj => obj.timesClicked)
+    },
+    {
       label: 'Views',
-      data: state.allProducts.map(obj => obj.timesShown),
-      backgroundColor: 'rgba(54, 162, 235)',
-      borderColor: 'transparent',
-      borderWidth: 4
+      data: state.allProducts.map(obj => obj.timesShown)
     }]
-  }
+  };
 
-  const resultOptions = {
-    options: {
-      responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true
-        }
+  const chartOptions = {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true
       }
     }
-  }
-  new Chart(canvasElem, {
+  };
+
+  // Create the chart
+  new Chart(ctx, {
     type: 'bar',
-    resultsData,
-    resultOptions
+    data: chartData,
+    options: chartOptions
   });
 }
 
