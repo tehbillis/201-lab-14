@@ -43,19 +43,20 @@ nav ul {
 
 nav ul li {
   margin-left: 20px;
+  transform: translate(0px, -10px);
 }
 
 nav ul li a {
   color: black;
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration:  none;
-  transition: color 0.3s, box-shadow 0.3s;
+  border-bottom: 3px solid transparent;
+  transition: color .5s ease-in-out, border-bottom .5s ease-in-out;
 }
 nav ul li a:hover {
-  color: black;
-  box-shadow: 2px 2px 2px rgba(17, 46, 57, 0.5);
-  border-radius: 5px;
+  color: #023F59;
+  border-bottom: 3px solid #023F59;
 }
 
 main {
@@ -84,4 +85,12 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+}
+
+#chart-selection {
+  max-height: 50vh;
+}
+
+#chart {
+  max-height: 50vh;
 }
