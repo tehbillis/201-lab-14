@@ -1,1 +1,87 @@
 /* TODO: Make it awesome */
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(222,231,235);
+  min-height: 100vh;
+}
+
+header {
+  border: 8px solid whitesmoke;
+  outline: 4px solid rgb(135, 206, 235);
+  box-shadow: 0 0 0 12px whitesmoke;
+  border-radius: 1vw;
+  height: 5vw;
+  width: auto;
+  margin: 2vw
+  /* background-color: floralwhite; */
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 3.5vw;
+  font-style: italic;
+  font-weight: bolder;
+  color: rgb(135, 206, 235);
+  text-shadow:  
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+nav ul {
+
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 1vw;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration:  none;
+  transition: color 0.3s, box-shadow 0.3s;
+}
+nav ul li a:hover {
+  color: black;
+  box-shadow: 2px 2px 2px rgba(17, 46, 57, 0.5);
+  border-radius: 5px;
+}
+
+main {
+  flex: 1;
+  margin: 5%; /* Adjust margin as needed */
+}
+
+/* Flex container styles */
+section {
+  display: flex;
+  justify-content: space-evenly; /* Distribute space between images */
+}
+
+/* Image styles */
+img {
+  width: 300px;
+  height: auto;
+}
+
+img:hover {
+  color: black;
+  box-shadow: 2px 2px 5px 2px rgba(17, 46, 57, 0.5);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
